@@ -12,7 +12,7 @@ def print_rangoli(size):
     lst.extend(lst[:-1][::-1])
     for l in lst:
         print(l)
-    return "\n".join(lst)
+  
         
 
 
