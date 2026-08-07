@@ -5,11 +5,13 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        for i in range(len(nums)):
-            for j in range(i+1,len(nums)):
-                if nums[i]+nums[j]==target:
-                    return (i,j)
-        
+        seen={}
+        for i,n in enumerate(nums):
+            sub=target-n
+            if n in seen:
+                return [seen[n],i]
+            else:
+                seen[sub]=i
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
